@@ -278,7 +278,7 @@ a {
     grid-column: 1/-1;
   }
   .placeMainHeaderTitle {
-    margin: 0;
+    margin: auto;
   }
   .placeMainCard {
     background-color: white;
@@ -294,7 +294,7 @@ a {
     transform: scale(1.09);
   }
   .placeMainCardFigure {
-    margin: 0;
+    margin: auto;
   }
   .placeMainCardFigureImg {
     height: 8rem;
@@ -379,6 +379,12 @@ a {
       grid-column: 1/-1;
     }
   }
+  @media (max-width: 1000px) {
+    .placePopular {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto repeat(3, 9rem);
+    }
+  }
   @media (min-width: 925px) {
     .placeMain {
       grid-template-columns: repeat(3, 1fr);
@@ -394,13 +400,6 @@ a {
       grid-template-columns: 1fr;
     }
   }
-  @media (max-width: 1000px) {
-    .placePopular {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto repeat(3, 9rem);
-    }
-  }
-
 
 /* Activity
    ------------------------------------------------------------------------- */
