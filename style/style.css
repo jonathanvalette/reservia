@@ -24,6 +24,7 @@ a {
 #headerLogo {
   padding: 0 2rem;
   height: 2.813rem;
+  cursor: pointer;
   grid-area: logo;
 }
 .headerNav {
@@ -105,7 +106,9 @@ a {
 
 /* Search
    ------------------------------------------------------------------------- */
-
+.search {
+  margin-top: 4rem;
+}
 .searchHeaderTitle {
   margin-bottom: 0.5rem;
 }
