@@ -307,9 +307,11 @@ a {
   }
   .placeMainCardFigureCaptionTitle {
     margin: 0.25rem 0.75rem 0 0.75rem;
+    margin: 0.25rem 0.75rem 0;
+
   }
   .placeMainCardDesc {
-    margin: 0.25rem 0.75rem 0.25rem 0.75rem;
+    margin: 0.25rem 0.75rem;
   }
   .placeMainCardDescPrice {
     font-weight: bold;
