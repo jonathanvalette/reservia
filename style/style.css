@@ -1,6 +1,3 @@
-/* Base styles
-   ------------------------------------------------------------------------- */
-
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
 body {
   font-family: "Raleway", "Sans serif";
@@ -12,7 +9,7 @@ a {
   text-decoration: none;
 }
 
-/* Header
+/* SECTION HEADER
    ------------------------------------------------------------------------- */
 
 .header {
@@ -24,6 +21,7 @@ a {
 #headerLogo {
   padding: 0 2rem;
   height: 2.813rem;
+  cursor: pointer;
   grid-area: logo;
 }
 .headerNav {
@@ -35,7 +33,7 @@ a {
   padding: 2rem;
   font-weight: 500;
   text-align: center;
-  transition-duration: 0.1s;
+  transition-duration: 1s;
   border-top: 3px transparent solid;
   border-bottom: 3px transparent solid;
 }
@@ -54,7 +52,7 @@ a {
   font-weight: 600;
 }
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 720px) {
   .header {
     grid-template-columns: auto 1fr auto auto;
     grid-template-areas: "logo . navbar button";
@@ -66,7 +64,7 @@ a {
     border-top: 3px solid #0065FC;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 720px) {
   .header {
     grid-template-columns: auto 1fr auto;
     grid-template-areas: "logo . button" "navbar navbar navbar";
@@ -93,10 +91,11 @@ a {
   }
 }
 
-/* Main
+/* SECTION MAIN
    ------------------------------------------------------------------------- */
 
-.main {
+#main {
+  display: flexbox;
   max-width: 1440px;
   margin: auto;
   padding: 0 2rem;
@@ -106,157 +105,160 @@ a {
 /* Search
    ------------------------------------------------------------------------- */
 
-.searchHeaderTitle {
-  margin-bottom: 0.5rem;
-}
-.searchHeaderSubtitle {
-  margin-top: 0;
-}
-.searchForm {
-  display: inline-flex;
-  max-width: 100%;
-  overflow: auto;
-}
-.searchFormWrapicon {
-  background-color: #F2F2F2;
-  padding: 1rem 1.25rem;
-  border-radius: 1rem 0 0 1rem;
-  text-align: center;
-}
-.searchFormWrapiconIcon {
-  margin-left: 0.1rem;
-}
-.searchFormSearchinput {
-  border-right: none;
-  border-left: none;
-  border-top: #F2F2F2 1px solid;
-  border-bottom: #F2F2F2 1px solid;
-  padding: 0 1.5rem;
-  box-sizing: border-box;
-  width: 14rem;
-  font-size: 1rem;
-  font-weight: bold;
-  font-family: "Raleway", "Sans serif";
-}
-.searchFormSearchinput::placeholder {
-  font-family: "Raleway", "Sans serif";
-  font-size: 1rem;
-  color: #00000069;
-}
-.searchFormSubmitinput {
-  background-color: #0065FC;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 0 1rem 1rem 0;
-  padding: 0 1.5rem;
-  font-family: "Raleway", "Sans serif";
-  font-size: 1rem;
-  cursor: pointer;
-}
-.searchFilters {
-  display: flex;
-  margin-top: 2rem;
-  flex-wrap: wrap;
-}
-.searchFiltersTitle {
-  margin: 0 2rem 1rem 0;
-  display: flex;
-  align-items: center;
-}
-.searchFiltersFilter {
-  display: flex;
-  align-items: center;
-  margin-right: 2rem;
-  border: 2px solid #d9d9d9;
-  border-radius: 2rem;
-  margin-bottom: 1rem;
-  cursor: pointer;
-  transition-duration: 0.1s;
-  font-weight: bold;
-}
-.searchFiltersFilter:last-child {
-  margin-right: 0;
-}
-.searchFiltersFilter:hover {
-  background-color: #0065FC;
-  transform: scale(1.09);
-}
-.searchFiltersFilterWrapicon {
-  background-color: #DEEBFF;
-  border-radius: 100%;
-  height: 3rem;
-  width: 3rem;
-  min-height: 3.5rem;
-  min-width: 3.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: -2px;
-}
-.searchFiltersFilterWrapiconIcon {
-  color: blue;
-}
-.searchFiltersFilterTitle {
-  margin: 0 1rem;
-}
-.searchResult {
-  display: flex;
-  align-items: center;
-  margin: 1rem 0 2rem 0;
-}
-.searchResultWrapicon {
-  height: 2rem;
-  width: 2rem;
-  min-height: 2rem;
-  min-width: 2rem;
-  border: solid 1px #d9d9d9;
-  border-radius: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 1rem;
-}
-.searchResultWrapiconIcon {
-  color: #0065FC;
-}
-.searchResultText {
-  margin: 0;
-}
-
-@media screen and (max-width: 600px) {
+   .searchHeaderTitle {
+    margin-bottom: 0.5rem;
+  }
+  .searchHeaderSubtitle {
+    margin-top: 0;
+  }
   .searchForm {
-    display: flex;
-    width: 100%;
+    display: inline-flex;
+    max-width: 100%;
+    overflow: auto;
+  }
+  .searchFormWrapicon {
+    background-color: #F2F2F2;
+    padding: 1rem 1.25rem;
+    border-radius: 1rem 0 0 1rem;
+    text-align: center;
+  }
+  .searchFormWrapiconIcon {
+    margin-left: 0.1rem;
   }
   .searchFormSearchinput {
-    flex: 1;
+    border-right: none;
+    border-left: none;
+    border-top: #F2F2F2 1px solid;
+    border-bottom: #F2F2F2 1px solid;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+    width: 14rem;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Raleway", "Sans serif";
   }
-  .searchFormSubmitinputText {
-    display: none;
+  .searchFormSearchinput::placeholder {
+    font-family: "Raleway", "Sans serif";
+    font-size: 1rem;
+    color: #00000069;
   }
-  .searchFormSubmitinputIcon {
-    display: block;
+  .searchFormSubmitinput {
+    background-color: #0065FC;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 0 1rem 1rem 0;
+    padding: 0 1.5rem;
+    font-family: "Raleway", "Sans serif";
+    font-size: 1rem;
+    cursor: pointer;
   }
-}
-@media screen and (max-width: 650px) {
+  .searchFilters {
+    display: flex;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
   .searchFiltersTitle {
-    width: 100%;
+    margin: 0 2rem 1rem 0;
+    display: flex;
+    align-items: center;
   }
   .searchFiltersFilter {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    border: 2px solid #d9d9d9;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    font-weight: bold;
+  }
+  .searchFiltersFilter:last-child {
+    margin-right: 0;
+  }
+  .searchFiltersFilter:hover {
+    background-color: #0065FC;
+    transform: scale(1.09);
+  }
+  .searchFiltersFilterWrapicon {
+    background-color: #DEEBFF;
+    border-radius: 100%;
+    height: 3rem;
+    width: 3rem;
+    min-height: 3.5rem;
+    min-width: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -2px;
+  }
+  .searchFiltersFilterWrapiconIcon {
+    color: blue;
+  }
+  .searchFiltersFilterTitle {
+    margin: 0 1rem;
+  }
+  .searchResult {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 2rem 0;
+  }
+  .searchResultWrapicon {
+    height: 2rem;
+    width: 2rem;
+    min-height: 2rem;
+    min-width: 2rem;
+    border: solid 1px #d9d9d9;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-right: 1rem;
   }
-}
-@media screen and (min-width: 601px) {
-  .searchFormSubmitinputText {
-    display: block;
+  .searchResultWrapiconIcon {
+    color: #0065FC;
   }
-  .searchFormSubmitinputIcon {
-    display: none !important;
+  .searchResultText {
+    margin: 0;
   }
-}
+  
+  @media screen and (max-width: 720px) {
+    .searchForm {
+      display: flex;
+      width: 100%;
+    }
+    .searchFormSearchinput {
+      flex: 1;
+    }
+    .searchFormSubmitinputText {
+      display: none;
+    }
+    .searchFormSubmitinputIcon {
+      display: block;
+    }
 
-/* Place
+    .searchFiltersTitle {
+      width: 100%;
+    }
+    .searchFiltersFilter {
+      margin-right: 1rem;
+    }
+  }
+
+  @media screen and (min-width: 540px) {
+    .searchFormSubmitinputText {
+      display: block;
+    }
+    .searchFormSubmitinputIcon {
+      display: none !important;
+    }
+  }
+  
+
+
+
+/* SECTION PLACE
    ------------------------------------------------------------------------- */
    .placeWrapper, .placePopular, .placeMain {
     background-color: #F2F2F2;
@@ -278,23 +280,23 @@ a {
     grid-column: 1/-1;
   }
   .placeMainHeaderTitle {
-    margin: 0;
+    margin: auto;
   }
   .placeMainCard {
     background-color: white;
     padding: 0.375rem;
     border-radius: 1.25rem;
     box-shadow: 0 0 16px #0000002e;
-    transition-duration: 0.1s;
+    transition-duration: 1s;
     cursor: pointer;
     box-sizing: border-box;
     height: 100%;
   }
   .placeMainCard:hover {
-    transform: scale(1.02);
+    transform: scale(1.09);
   }
   .placeMainCardFigure {
-    margin: 0;
+    margin: auto;
   }
   .placeMainCardFigureImg {
     height: 8rem;
@@ -364,7 +366,7 @@ a {
     flex: 1;
   }
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1140px) {
     .place {
       grid-template-columns: 1fr;
       row-gap: 2rem;
@@ -379,28 +381,27 @@ a {
       grid-column: 1/-1;
     }
   }
-  @media (min-width: 925px) {
+  @media (min-width: 960px) {
     .placeMain {
       grid-template-columns: repeat(3, 1fr);
     }
   }
-  @media (max-width: 925px) and (min-width: 650px) {
+  @media (max-width: 960px) and (min-width: 720px) {
     .placeMain {
       grid-template-columns: 1fr 1fr;
     }
   }
-  @media (max-width: 650px) {
+  @media (max-width: 720px) {
     .placeMain {
       grid-template-columns: 1fr;
     }
   }
-  @media (max-width: 1000px) {
+  @media (max-width: 992px) {
     .placePopular {
       grid-template-columns: 1fr;
       grid-template-rows: auto repeat(3, 9rem);
     }
   }
-
 
 /* Activity
    ------------------------------------------------------------------------- */
@@ -419,7 +420,7 @@ a {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition-duration: 0.1s;
+  transition-duration: 1s;
 }
 .activityCard:hover {
   transform: scale(1.09);
@@ -470,21 +471,21 @@ a {
     grid-column: 4/5;
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1140px) {
   .activity {
     row-gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto 12rem 12rem;
   }
 }
-@media (max-width: 925px) {
+@media (max-width: 992px) {
   .activity {
     row-gap: 2rem;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto 12rem 12rem 12rem;
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 720px) {
   .activity {
     row-gap: 2rem;
     grid-template-columns: 1fr;
@@ -492,7 +493,7 @@ a {
   }
 }
 
-/* Footer
+/* SECTION FOOTER
    ------------------------------------------------------------------------- */
 
    .footer {
@@ -521,7 +522,7 @@ a {
     text-decoration: underline;
   }
   
-  @media (max-width: 750px) {
+  @media (max-width: 768px) {
     .footerColumnwrap {
       flex-direction: column;
       padding: 2rem;
@@ -545,4 +546,3 @@ a {
       margin-bottom: 0;
     }
   }
-
